@@ -15,13 +15,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean
+    #  - mvn clean
       - mvn install
   post_build: 
     commands: 
       - echo build completed on `date`
     #  - mvn package
 artifacts:
-  files:
-    - 'target/*.war'  
+  files: target/*.war
     discard-paths: yes
