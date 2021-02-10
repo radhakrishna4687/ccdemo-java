@@ -7,12 +7,12 @@ phases:
     commands: 
       - echo Nothing to do the install phase....
   pre_build:
-     command:
+     commands:
       - echo Build started on `date'
       - mvn install 
   post_build: 
-    command: 
+    commands: 
       - echo build completed on `date`
 artifacts:
-  file:
+  files:
     - 'target/ccdemo.war'     
