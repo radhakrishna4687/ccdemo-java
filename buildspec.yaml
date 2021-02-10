@@ -9,19 +9,19 @@ phases:
   pre_build:
      commands:
       - echo Build started on `date`
-    #  - apt-get -y install maven
+      - apt-get update -y
+      - apt-get -y install maven
       
   build:
     commands:
       - echo Build started on `date`
-     # - mvn -e clean
-      - mvn test
-      - mvn clean 
+      - mvn clean
       - mvn install
   post_build: 
     commands: 
       - echo build completed on `date`
-      - mvn package
+    #  - mvn package
 artifacts:
   files:
-    - 'target/ccdemo.war'    
+    - target/*.war   
+    discard-paths: yes
