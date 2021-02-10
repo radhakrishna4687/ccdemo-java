@@ -8,7 +8,7 @@ phases:
       - echo Nothing to do the install phase....
   pre_build:
      commands:
-      - echo Build started on `date'
+      - echo Build started on `date`
       - mvn install 
   post_build: 
     commands: 
