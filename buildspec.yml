@@ -12,12 +12,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean
-      - mvn install
+      - mvn -e clean
+      - mvn -e install
   post_build: 
     commands: 
       - echo build completed on `date`
-      - mvn package
+      #- mvn package
 artifacts:
   files:
     - target/ccdemo-java.war     
