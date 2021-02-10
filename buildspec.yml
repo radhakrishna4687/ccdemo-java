@@ -23,5 +23,5 @@ phases:
     #  - mvn package
 artifacts:
   files: 
-  - target/*.war
+    - target/*.war
     discard-paths: yes
