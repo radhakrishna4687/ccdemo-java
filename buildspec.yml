@@ -9,10 +9,12 @@ phases:
   pre_build:
      commands:
       - echo Build started on `date`
+      - apt-get -y install maven
+      
   build:
     commands:
       - echo Build started on `date`
-      - mvn -e clean
+     # - mvn -e clean
       - mvn -e install
   post_build: 
     commands: 
@@ -20,4 +22,4 @@ phases:
       #- mvn package
 artifacts:
   files:
-    - target/ccdemo-java.war     
+    - 'target/ccdemo.war'    
