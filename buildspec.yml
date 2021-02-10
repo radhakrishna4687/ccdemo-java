@@ -20,4 +20,4 @@ phases:
      # - mvn package
 artifacts:
   files:
-    - 'target/ccdemo.war'     
+    - target/ccdemo.war     
