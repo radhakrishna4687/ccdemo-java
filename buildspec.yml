@@ -15,11 +15,13 @@ phases:
     commands:
       - echo Build started on `date`
      # - mvn -e clean
-      - mvn clean install 
+      - mvn test
+      - mvn clean 
+      - mvn install
   post_build: 
     commands: 
       - echo build completed on `date`
-      #- mvn package
+      - mvn package
 artifacts:
   files:
     - 'target/ccdemo.war'    
