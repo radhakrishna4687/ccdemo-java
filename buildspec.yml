@@ -9,13 +9,13 @@ phases:
   pre_build:
      commands:
       - echo Build started on `date`
-      - apt-get -y install maven
+    #  - apt-get -y install maven
       
   build:
     commands:
       - echo Build started on `date`
      # - mvn -e clean
-      - mvn -e install
+      - mvn -e -X install
   post_build: 
     commands: 
       - echo build completed on `date`
