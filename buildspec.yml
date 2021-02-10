@@ -22,5 +22,6 @@ phases:
       - echo build completed on `date`
     #  - mvn package
 artifacts:
-  files: target/*.war
+  files: 
+  - target/*.war
     discard-paths: yes
