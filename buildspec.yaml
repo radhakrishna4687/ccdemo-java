@@ -1,16 +1,23 @@
 version: 0.2 
 
 phases:
-  install: 
-    commands: 
-      - echo Nothing to do the install phase....
-  pre_build:
-     command:
-      - echo Build started on `date'
+  install:
+    runtime-version:
+      java: openjdk8
+    commands:
+      - echo Nothing to dod in the install phases.
+    pre_build:
+      commands:
+        - echo Nothing to do in the pre_build phase.
+    build: 
+      - echo Build started on `date`
       - mvn install 
-  post_build: 
-    command: 
-      - echo build completed on `date`
+    post_build:
+      - echo build is completed on `date`
 artifacts:
-  file:
-    - 'target/ccdemo.war'     
+  files:
+    - 'target/ccdemo.war'
+    - 'appspec.yml'
+    - 'script/before_install.sh'
+    - 'sccript/after_install.sh'
+    - 'script/start_server.sh'      
