@@ -96,7 +96,7 @@ Resources:
           Value: !Sub BuildRestAppCfnProject-${AWS::StackName}
 
   CodeDeployServicerole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties: 
       RoleName:
         Fn::Sub: CodeDeployServiceRole-${AWS::StackName}
