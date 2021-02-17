@@ -16,10 +16,12 @@ phases:
       - echo build is completed on `date`
 artifacts:
   type: zip
+  discard-paths: yes
   files: 
     - |
       target/*.war
       appspec.yml
-      script/before_install.sh
-      sccript/after_install.sh
-      script/start_server.sh       
+      scripts/before_install.sh
+      sccripts/after_install.sh
+      scripts/start_server.sh   
+      scripts/stop_server.sh
