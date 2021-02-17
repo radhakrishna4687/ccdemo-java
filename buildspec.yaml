@@ -5,25 +5,23 @@ phases:
     runtime-version:
       java: openjdk8
     commands:
-      - echo Nothing to do in the install phases.
-    pre_build:
-      commands:
-        - echo Nothing to do in the pre_build phase.
-    build: 
-      commands:
-        - echo Build started on `date`
-        - mvn install 
-    post_build:
-      commands:
-        - echo build is completed on `date`
+      - echo Nothing to dod in the install phases.
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase.
+  build: 
+    commands:
+      - echo Build started on `date`
+      - mvn install 
+  post_build:
+    commands:
+      - echo build is completed on `date`
 artifacts:
   type: zip
-  discard-paths: yes
   files: 
     - |
       target/*.zip
       appspec.yml
-      scripts/before_install.sh
-      sccripts/after_install.sh
-      scripts/start_server.sh   
-      scripts/stop_server.sh
+      script/before_install.sh
+      sccript/after_install.sh
+      script/start_server.sh    
