@@ -18,7 +18,7 @@ artifacts:
   type: zip
   files: 
     - |
-      target/ccdemo.war
+      target/*.war
       appspec.yml
       script/before_install.sh
       sccript/after_install.sh
