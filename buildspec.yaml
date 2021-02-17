@@ -19,7 +19,7 @@ artifacts:
   discard-paths: yes
   files: 
     - |
-      target/*.war
+      target/*.zip
       appspec.yml
       scripts/before_install.sh
       sccripts/after_install.sh
