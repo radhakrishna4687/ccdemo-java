@@ -143,6 +143,16 @@ Resources:
           Type: "KEY_AND_VALUE"
       ServiceRoleArn: !GetAtt CodeDeployServicerole.Arn
       DeploymentGroupName: !Sub DeploymentGroupName-${AWS::StackName}
+      Deployment:
+        Description: "First Deploy"
+        IgnoreApplicationStopFailures: true
+        Revision: 
+          RevisionType: S3
+          S3Location:
+            Bucket: !Ref ArtifactStoreS3Location
+            Key: !Sub BuildRestAppCfnProject-${AWS::StackName}
+            BundleType: Zip
+
 
 
           
